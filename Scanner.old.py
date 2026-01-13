@@ -1,3 +1,6 @@
+#legacy, just here for reference. use the other. 
+
+
 import re
 import pytesseract
 from pytesseract import Output
