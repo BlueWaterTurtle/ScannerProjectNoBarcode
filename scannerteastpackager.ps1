@@ -1,0 +1,1 @@
+﻿pyinstaller --onefile --add-data "C:\Program Files\Tesseract-OCR;Tesseract-OCR" --add-data "C:/Program Files/Tesseract-OCR/tessdata;Tesseract-OCR/tessdata" C:\Scripts\scannertest.py
