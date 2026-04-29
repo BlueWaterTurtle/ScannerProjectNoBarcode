@@ -2,13 +2,17 @@
 name = "scanner_rs"
 version = "0.1.0"
 edition = "2024"
-description = "Watches a directory for PNG files, extracts PO numbers via Tesseract OCR, and renames/moves them accordingly."
+description = "PO Scanner GUI application — OCR and barcode, with hardware scan support on Windows."
 
 [dependencies]
-anyhow = "1.0"
-clap = { version = "4", features = ["derive"] }
-env_logger = "0.11"
-log = "0.4"
-notify = "6.1"
-regex = "1"
-uuid = { version = "1", features = ["v4"] }
+anyhow       = "1.0"
+egui         = "0.34"
+egui_extras  = { version = "0.34", features = ["image"] }
+eframe       = { version = "0.34", features = ["default_fonts", "glow", "x11", "wayland"] }
+image        = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+log          = "0.4"
+env_logger   = "0.11"
+notify       = "6.1"
+regex        = "1"
+rxing        = { version = "0.8", default-features = false, features = ["image_formats"] }
+uuid         = { version = "1", features = ["v4"] }
