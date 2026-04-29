@@ -31,6 +31,7 @@ pub fn move_file(src: &Path, dest_dir: &Path, po_number: Option<&str>) -> Result
                 .extension()
                 .map(|e| format!(".{}", e.to_string_lossy()))
                 .unwrap_or_default();
+            // Use the first 6 hex chars of a UUID v4 to create a unique suffix.
             let suffix = &Uuid::new_v4().simple().to_string()[..6];
             dest_dir.join(format!("{po}_{suffix}{ext}"))
         }

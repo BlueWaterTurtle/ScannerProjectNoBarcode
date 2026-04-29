@@ -15,7 +15,7 @@ pub fn scan_to_file(output_path: &Path) -> Result<()> {
     let out = output_path
         .to_str()
         .ok_or_else(|| anyhow::anyhow!("Output path contains non-UTF-8 characters"))?
-        .replace('"', "");          // simple sanitise — no double-quotes in path
+        .replace('"', "");          // sanitize — no double-quotes in path
 
     let script = format!(
         r#"
